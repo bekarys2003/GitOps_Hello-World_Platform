@@ -1,0 +1,17 @@
+image:
+  repository: ghcr.io/YOUR_GH_USER/YOUR_REPO/app
+  tag: "latest" # CI will bump per env to :<git-sha>
+  pullPolicy: IfNotPresent
+replicaCount: 2
+service:
+  type: ClusterIP
+  port: 80
+containerPort: 3000
+ingress:
+  enabled: true
+  className: "traefik"
+  hosts:
+    - host: hello.localtest.me # resolves to 127.0.0.1
+      paths:
+        - path: /
+          pathType: Prefix
