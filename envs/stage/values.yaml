@@ -1,0 +1,3 @@
+image:
+  tag: "manual" # promote by PR changing this to a known :sha
+replicaCount: 2

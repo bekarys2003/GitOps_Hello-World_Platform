@@ -19,6 +19,6 @@ spec:
                 name: {{ include "hello.fullname" $ }}
                 port:
                   number: {{ $.Values.service.port }}
+          {{- end }}
     {{- end }}
-  {{- end }}
 {{- end }}
