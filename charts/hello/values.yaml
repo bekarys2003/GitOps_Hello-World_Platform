@@ -1,5 +1,5 @@
 image:
-  repository: ghcr.io/YOUR_GH_USER/YOUR_REPO/app
+  repository: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
   tag: "latest" # CI will bump per env to :<git-sha>
   pullPolicy: IfNotPresent
 replicaCount: 2

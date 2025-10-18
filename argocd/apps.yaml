@@ -20,24 +20,24 @@ metadata:
   namespace: argocd
   labels:
     env: dev
-  spec:
-    project: hello
-    source:
-      repoURL: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
-      targetRevision: main
-      path: charts/hello
-      helm:
-        valueFiles:
-          - ../../envs/dev/values.yaml
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: dev
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - CreateNamespace=true
+spec:
+  project: hello
+  source:
+    repoURL: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
+    targetRevision: main
+    path: charts/hello
+    helm:
+      valueFiles:
+        - ../../envs/dev/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -46,20 +46,20 @@ metadata:
   namespace: argocd
   labels:
     env: stage
-  spec:
-    project: hello
-    source:
-      repoURL: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
-      targetRevision: main
-      path: charts/hello
-      helm:
-        valueFiles:
-          - ../../envs/stage/values.yaml
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: stage
-    syncPolicy:
-      automated: {}
+spec:
+  project: hello
+  source:
+    repoURL: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
+    targetRevision: main
+    path: charts/hello
+    helm:
+      valueFiles:
+        - ../../envs/stage/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: stage
+  syncPolicy:
+    automated: {}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -72,6 +72,7 @@ spec:
   project: hello
   source:
     repoURL: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
+    targetRevision: main
     path: charts/hello
     helm:
       valueFiles:
