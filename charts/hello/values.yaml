@@ -1,6 +1,6 @@
 image:
-  repository: https://github.com/bekarys2003/GitOps_Hello-World_Platform.git
-  tag: "latest" # CI will bump per env to :<git-sha>
+  repository: reg.localhost:5111/hello
+  tag: "0.1.0" # CI will bump per env to :<git-sha>
   pullPolicy: IfNotPresent
 replicaCount: 2
 service:
