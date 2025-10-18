@@ -1,3 +1,4 @@
 image:
-  tag: "manual" # promote by PR changing this to a known :sha
-replicaCount: 2
+  repository: hello
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent

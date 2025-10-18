@@ -1,3 +1,4 @@
 image:
-  tag: "latest" # CI will bump to :<sha>
-replicaCount: 1
+  repository: hello
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
