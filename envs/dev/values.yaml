@@ -1,4 +1,0 @@
-image:
-  repository: ghcr.io/bekarys2003/gitops-hello-world-platform/app
-  tag: 8efbea34bda9bfe8b522c93d730ebbdfc756ffd8 # (or a specific :sha later)
-  pullPolicy: IfNotPresent

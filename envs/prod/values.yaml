@@ -1,4 +1,0 @@
-image:
-  repository: ghcr.io/bekarys2003/gitops-hello-world-platform/app
-  tag: latest          # (or a specific :sha later)
-  pullPolicy: IfNotPresent
